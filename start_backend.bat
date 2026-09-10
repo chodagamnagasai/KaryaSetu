@@ -1,4 +1,5 @@
 @echo off
+<<<<<<< HEAD
 setlocal
 cd /d "%~dp0backend"
 if not exist .env (
@@ -28,3 +29,14 @@ if errorlevel 1 (
 
 python -m uvicorn server:app --host 127.0.0.1 --port 8000
 endlocal
+=======
+cd /d "%~dp0backend"
+if not exist .env (
+  echo ERROR: backend\.env not found.
+  echo Copy backend\.env.example to backend\.env and configure MongoDB Atlas first.
+  pause
+  exit /b 1
+)
+python -m pip install -r requirements.txt
+python -m uvicorn server:app --host 127.0.0.1 --port 8000
+>>>>>>> f23ae37521d7e6b1487fa61cf3628a3e1d1a29ca
