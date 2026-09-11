@@ -10,4 +10,4 @@ python-multipart==0.0.20
 pandas==2.3.3
 openpyxl==3.1.5
 xlrd==2.0.1
-google-genai==2.22.0
+httpx==0.28.1
